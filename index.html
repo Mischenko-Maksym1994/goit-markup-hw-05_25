@@ -40,7 +40,7 @@
             <div class="container hero-conteiner">
                 <h1 class="main-title">Effective Solutions</br>
                 for Your Business</h1>
-                <button type="button" class="hero-button">Order Service</button>
+                <button type="button" class="button hero-button">Order Service</button>
             </div>
         </section>
 
@@ -359,15 +359,56 @@
 
             <div class="footer-tumb">
                 <form class="footer-form">
-                    <label class="">
+                    <label class="footer-label">
                         <span class="thirt-title footer-tittle">Subscribe</span>
-                        <input type="email" name="email" placeholder="E-mail" class="">
+                        <input type="email" name="email" placeholder="E-mail" class="footer-placeholder">
                     </label>
-                    <button type="button" class="">Subscribe</button>
+                    <button type="button" class="button footer-button">Subscribe
+                        <svg class="icon footer-btn-icon" width="24" height="24">
+                            <use href="./img/icons.svg#telegram"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
 
         </div>
     </footer>
+
+    <div class="modal-overlay is-open">
+        <div class="modal">
+            
+            <form class="modal-form">
+                <legend class="modal-title">Leave your contacts and we will call you back</legend>
+                <label class="form-label small-text">Name
+                    <input type="text" name="user_name" placeholder=""  class="form-input">
+                </label>
+
+                <label class="form-label small-text">Phone
+                    <input type="tel" name="user_phone" placeholder="" class="form-input">
+                </label>
+
+                <label class="form-label small-text">Email
+                    <input type="email" name="user_email" placeholder="" class="form-input">
+                </label>
+
+                <label class="form-label small-text">Comment
+                    <textarea name="form_coment" placeholder="Text input" class="form-input"></textarea>
+                </label>
+
+                <fieldset class="form-politica-group">
+                    <label class="form-label form-checkbox">
+                        <input type="checkbox" name="activ-privat">
+                    </label>
+                    <p class="small-text">I accept the terms and conditions of the
+                    <a href="" class="form-link">Privacy Policy</a></p>
+                </fieldset>
+
+                <button type="button" class="button form-btn">Send</button>
+
+
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
