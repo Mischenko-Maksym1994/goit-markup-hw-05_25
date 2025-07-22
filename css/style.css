@@ -103,6 +103,7 @@ input {
     line-height: 1.5;
     border-radius: 4px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -142,7 +143,7 @@ header {
     font-size: 16px;
     line-height: 1.5;
     padding-bottom: 24px;
-    transition: color 250ms ease-in-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-link:hover,
@@ -163,7 +164,7 @@ header {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    transition: color 250ms ease-in-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact:hover,
@@ -276,7 +277,7 @@ header {
     height: 40px;
     background-color: #4D5AE5;
     border-radius: 50%;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-iteam:not(:first-child) {
@@ -307,7 +308,7 @@ header {
 .portfolio-iteam {
     position: relative;
     overflow: hidden;
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-hover-card {
@@ -327,7 +328,7 @@ header {
     height: 300px;
     background-color: #4D5AE5;
     transform: translateY(-100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-iteam:hover .overlay {
@@ -385,6 +386,10 @@ header {
     color: #F4F4FD;
     margin-top: 16px;
     width: 264px;
+}
+
+.footer-social-iteam {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-iteam:hover,
@@ -450,8 +455,10 @@ header {
     align-items: center;
     opacity: 0;
     pointer-events: 0;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/************modal-window****************/
+/************overlay****************/
 
 .modal-overlay.is-open {
     opacity: 1;
@@ -461,7 +468,6 @@ header {
 .modal {
     background-color: #FCFCFC;
     width: 408px;
-    height: 584px;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 72px;
@@ -469,17 +475,56 @@ header {
     box-shadow: 0 1px 1px 0 #00000024,
                 0 1px 3px 0 #0000001F;
     overflow-y: auto;
+    position: relative;
 }
 
-/************modal-window****************/
+.modal-btn {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+.modal-icon-close {
+    padding: 8px;
+    background-color: #E7E9FC;
+    border: 1px solid #0000001A;
+    border-radius: 50%;
+    fill: #2E2F42;
+
+    /* position: absolute;
+    right: 24px;
+    top: 24px; */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon-close:hover {
+    background-color: #404BBF;
+    fill: #fff;
+}
+
 .modal-form {
     display: flex;
     flex-direction: column;
 }
 
+.modal-title {
+    color: #2E2F42;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
 .form-label {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .form-label:not(:last-child) {
@@ -489,7 +534,30 @@ header {
 .form-input {
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left: 16px;
+    padding-left: 38px;
+    border: 1px solid #2E2F4266;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-input:active {
+    border-color: blue;
+    outline: none;
+}
+
+.form-icon {
+    position: absolute;
+    left: 16px;
+    top: calc(50% - 6px);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon,
+.form-input:active + .form-icon {
+    fill: #4D5AE5;
 }
 
 .form-checkbox {
@@ -500,18 +568,23 @@ header {
 .modal-form textarea {
     resize: none;
     height: 120px;
+    padding-left: 16px;
 }
 
 .form-politica-group {
     display: flex;
     flex-direction: row;
+    border: none;
+    padding-left: 0px;
 }
 
-.modal-title {
-    color: #2E2F42;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 16px;
+.form-link {
+    color: #4D5AE5;
+    text-decoration: underline solid;
+}
+
+.form-btn {
+    padding: 16px 32px;
+    width: 169px;
+    margin: 24px auto;
 }
